@@ -20,8 +20,12 @@ jobs:
       run: |
         npm install
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4db8637874ab74d4dc157e9ee023e360bf0aeb91
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v1.1.2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
+       
