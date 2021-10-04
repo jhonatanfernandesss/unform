@@ -11,10 +11,10 @@ jobs:
 
     - uses: actions/checkout@v1
 
-    - name: Use Node.js 12.x
+    - name: Use Node.js 10.x
       uses: actions/setup-node@v1
       with:
-        node-version: 12.x
+        node-version: 10.x
 
     - name: npm install, make test-coverage
       run: |
@@ -24,11 +24,4 @@ jobs:
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
-        github-token: ${{ secrets.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 }}
-<<<<<<< HEAD
-
-        
-=======
-        parallel-finished: true
-        
->>>>>>> c4f6938c7281fa000e3452aff8844f22bb76ee60
+        github-token: ${{ secrets.GITHUB_TOKEN }}
