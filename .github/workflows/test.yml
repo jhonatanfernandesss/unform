@@ -17,9 +17,8 @@ jobs:
         node-version: 10.x
 
     - name: npm install
-      run: |
-        npm install
-
+      uses: npm install
+        
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v1.1.2
       with:
