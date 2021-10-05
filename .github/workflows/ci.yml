@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-         with:
-          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -28,8 +26,13 @@ jobs:
       - name: Install Dependencies
         run: yarn --1.22.15
         
-      - name: Check commit message
-      - uses: wagoid/commitlint-github-action@v4
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+        github-token: ${{ secrets.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}}
+
+        
+
         
 
 
