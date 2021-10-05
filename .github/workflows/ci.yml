@@ -5,7 +5,9 @@ name: build
 jobs:
   test:
     runs-on: ubuntu-latest
-
+    env:
+     github-token: ${{ secrets.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 }}
+   
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
