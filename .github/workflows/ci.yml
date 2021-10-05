@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@master
         with:
           version: 10.x
-      - run: npm install
+      - run: npm install mocha-lcov-reporter --save-dev
       - name: Coveralls
         uses: coverallsapp/github-action@v1.1.0
         env:
