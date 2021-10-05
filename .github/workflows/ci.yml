@@ -25,10 +25,10 @@ jobs:
       - name: Install Dependencies
         run: yarn --1.22.15
         
-      - name: npm install, make test-coverage
+      - name: npm install
         run: |
-        npm install
-        make test-coverage
+          npm install
+
 
         
 
