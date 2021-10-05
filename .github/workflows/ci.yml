@@ -12,13 +12,12 @@ jobs:
         with:
           version: 10.x
       - run: npm install
-      - run: make test-coverage-${{ matrix.test_number }}
       - name: Coveralls
         uses: coverallsapp/github-action@v1.1.0
         env:
           NODE_COVERALLS_DEBUG: 1
         with:
-          github-token: ${{ secrets.github_token }}
+          github-token: ${{ secrets.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 }}
           parallel: true
           flag-name: run-${{ matrix.test_number }}
 
