@@ -1,7 +1,6 @@
 
 name: CI
 
-
 on:
 
   push:
@@ -13,7 +12,8 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-
+  env:
+    GITHUB_TOKEN: ${{ secrets.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}}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -28,8 +28,7 @@ jobs:
         
       - name: Coveralls
         uses: coverallsapp/github-action@master
-        with:
-        github-token: ${{ secrets.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}}
+
 
         
 
