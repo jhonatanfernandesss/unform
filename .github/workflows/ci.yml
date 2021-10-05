@@ -25,10 +25,6 @@ jobs:
       - name: Install Dependencies
         run: yarn --1.22.15
         
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        with: 
-          github-token: ${{ secrets.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 }}
 
 
 
