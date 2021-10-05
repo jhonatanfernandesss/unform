@@ -3,6 +3,7 @@ import {
   FormHTMLAttributes,
   FormEvent,
   ReactNode,
+  RefObject,
 } from 'react'
 
 interface BaseUnformField<T> {
@@ -29,7 +30,7 @@ export interface UnformErrors {
 }
 
 export interface UnformContext {
-  initialData: Record<string, unknown>
+  initialData: Record<string, any>
   errors: UnformErrors
   scopePath: string
   registerField<T>(field: UnformField<T>): void
@@ -51,17 +52,17 @@ export interface FormHandles {
   getFieldError(fieldName: string): string | undefined
   setFieldError(fieldName: string, error: string): void
   clearField(fieldName: string): void
-  getData(): Record<string, unknown>
-  getFieldRef(fieldName: string): any
-  setData(data: Record<string, unknown>): void
+  getData(): Record<string, any>
+  getFieldRef<T = unknown>(fieldName: string): RefObject<T> | RefObject<T>[]
+  setData(data: Record<string, any>): void
   getErrors(): UnformErrors
   setErrors(errors: Record<string, string>): void
-  reset(data?: Record<string, unknown>): void
+  reset(data?: Record<string, any>): void
   submitForm(): void
 }
 
 export interface FormHelpers {
-  reset: (data?: Record<string, unknown>) => void
+  reset: (data?: Record<string, any>) => void
 }
 
 export interface SubmitHandler<T = any> {
@@ -69,7 +70,7 @@ export interface SubmitHandler<T = any> {
 }
 
 export interface FormProps extends Omit<HTMLFormProps, 'onSubmit'> {
-  initialData?: Record<string, unknown>
+  initialData?: Record<string, any>
   children: ReactNode
   onSubmit: SubmitHandler
 }
