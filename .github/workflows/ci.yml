@@ -30,9 +30,7 @@ jobs:
           npm install
       - name: Coveralls Finished
           uses: coverallsapp/github-action@master
-          with:
-          github-token: ${{ secrets.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 }}
-          parallel-finished: true
+
 
 
         
