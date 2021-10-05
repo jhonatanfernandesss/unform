@@ -33,6 +33,25 @@ jobs:
         uses: coverallsapp/github-action@master
         github-token: ${{ secrets.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 }}
 
+    - name: Test ${{ matrix.test_number }}
+      run: make test-coverage-${{ matrix.test_number }}
+    - name: Coveralls Parallel
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.github_token }}
+        flag-name: run-${{ matrix.test_number }}
+        parallel: true
+
+       finish:
+     needs: test
+     runs-on: ubuntu-latest
+     steps:
+     
+    - name: Coveralls Finished
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.github_token }}
+        parallel-finished: true
 
 
         
