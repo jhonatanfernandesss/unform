@@ -28,8 +28,10 @@ jobs:
       - name: npm install
         run: |
           npm install
+          
       - name: Coveralls Finished
         uses: coverallsapp/github-action@master
+        github-token: ${{ secrets.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 }}
 
 
 
