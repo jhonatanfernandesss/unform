@@ -1,6 +1,6 @@
 {
   "name": "@unform/core",
-  "version": "2.1.6",
+
   "description": "Unform core package",
   "author": "Diego Fernandes <diego.schell.f@gmail.com>",
   "homepage": "https://github.com/unform/unform#readme",
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "dot-object": "^2.1.4"
+
   },
   "devDependencies": {},
   "peerDependencies": {

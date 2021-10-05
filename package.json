@@ -26,10 +26,7 @@
     "tsc": "tsc --skipLibCheck",
     "prepublishOnly": "npm run test && npm run build",
     "publish:canary": "lerna version prerelease --no-changelog --preid next",
-    "publish:stable": "lerna version --no-changelog",
-    "postinstall": "husky install",
-    "start:app": "yarn --cwd packages/components link && yarn --cwd ./app link @unform/components && yarn --cwd ./app && yarn --cwd ./app run dev"
-  },
+
   "devDependencies": {
     "@babel/core": "7.12.10",
     "@commitlint/cli": "12.0.1",

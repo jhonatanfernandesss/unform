@@ -20,6 +20,5 @@
       "message": "chore(release): Publish %s",
       "registry": "https://registry.npmjs.org/"
     }
-  },
-  "version": "2.1.6"
+  }
 }
